@@ -32,11 +32,11 @@ const dl = require('damerau-levenshtein-js');
 dl.distance('VitalikButerin', 'VitaljkButerin');
 ```
 
-A call to the "distance" function located in "damerau-levenshtein.js" returns an
-integer that represents the calculated distance between the 2 strings passed as
-parameters. If 0 is returned, the strings are identical. The higher the score,
-the less similar the strings are. -1 means that a problem occurred because of a
-null or undefined parameter.
+A call to the "distance" function located in "app.js" returns an integer that
+represents the calculated distance between the 2 strings passed as parameters.
+If 0 is returned, the strings are identical. The higher the score, the less
+similar the strings are. -1 means that a problem occurred because of a null or
+undefined parameter.
 
 DONATION:
 As I share these sources for commercial use too, maybe you could consider
