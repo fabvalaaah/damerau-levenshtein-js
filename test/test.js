@@ -47,7 +47,7 @@
 
 'use strict';
 
-const dl = require('../damerau-levenshtein.js');
+const dl = require('../app.js');
 
 // Yeah, that's totally an hommage to Vitalik Buterin, founder of Ethereum
 // https://twitter.com/VitalikButerin/status/958653430607704064

@@ -39,7 +39,7 @@
  */
 
 /* 
- * File:   damerau-levenshtein.js
+ * File:   app.js
  * Author: Fabvalaaah
  *
  * 02/01/2018

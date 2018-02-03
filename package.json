@@ -1,8 +1,9 @@
 {
     "name": "damerau-levenshtein-js",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [ "Damerau", "Levenshtein", "Damerau-Levenshtein", "Levenshtein-Damerau", "string", "distance", "easy", "simple", "NPM", "NodeJS", "scam", "scammer", "scammers", "fake", "account", "accounts", "phishing" ],
     "description": "Easy to use NodeJS NPM module that calculates the Damerau-Levenshtein distance between 2 strings",
+    "main": "app.js",
     "license": "MIT",
     "author": "Fabvalaaah",
     "email": "fabvalaaah@laposte.net",
