@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/tom/nbworkspace/damerau-levenshtein-js',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/tom/.npm/damerau-levenshtein-js/1.0.0/package.tgz not in flight; packing
+9 info lifecycle damerau-levenshtein-js@1.0.0~prepublish: damerau-levenshtein-js@1.0.0
+10 silly lifecycle damerau-levenshtein-js@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/home/tom/.npm/damerau-levenshtein-js/1.0.0/package.tgz',
+11 verbose tar pack   '/home/tom/nbworkspace/damerau-levenshtein-js' ]
+12 verbose tarball /home/tom/.npm/damerau-levenshtein-js/1.0.0/package.tgz
+13 verbose folder /home/tom/nbworkspace/damerau-levenshtein-js
+14 verbose addLocalTarball adding from inside cache /home/tom/.npm/damerau-levenshtein-js/1.0.0/package.tgz
+15 silly cache afterAdd damerau-levenshtein-js@1.0.0
+16 verbose afterAdd /home/tom/.npm/damerau-levenshtein-js/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /home/tom/.npm/damerau-levenshtein-js/1.0.0/package/package.json written
+18 silly publish { name: 'damerau-levenshtein-js',
+18 silly publish   version: '1.0.0',
+18 silly publish   keywords:
+18 silly publish    [ 'Damerau',
+18 silly publish      'Levenshtein',
+18 silly publish      'Damerau-Levenshtein',
+18 silly publish      'Levenshtein-Damerau',
+18 silly publish      'string',
+18 silly publish      'distance',
+18 silly publish      'easy',
+18 silly publish      'simple',
+18 silly publish      'NPM',
+18 silly publish      'NodeJS',
+18 silly publish      'scam',
+18 silly publish      'scammer',
+18 silly publish      'scammers',
+18 silly publish      'fake',
+18 silly publish      'account',
+18 silly publish      'accounts',
+18 silly publish      'phishing' ],
+18 silly publish   description: 'Easy to use NodeJS NPM module that calculates the Damerau-Levenshtein distance between 2 strings',
+18 silly publish   license: 'MIT',
+18 silly publish   author: { name: 'Fabvalaaah' },
+18 silly publish   email: 'fabvalaaah@laposte.net',
+18 silly publish   contributors: [ { name: 'Fabvalaaah' } ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/fabvalaaah/damerau-levenshtein-js.git' },
+18 silly publish   scripts: { test: 'node test/test.js' },
+18 silly publish   dependencies: {},
+18 silly publish   readme: '# damerau-levenshtein-js\nEasy to use NodeJS NPM module that calculates the Damerau-Levenshtein distance\nbetween 2 strings.\n\nThis is a NodeJS NetBeans project, tested with NodeJS v4.2.6 on Ubuntu Linux\n16.04.3 LTS x64.\n\nI remembered this algorithm because of a wise suggestion of Vitalik Buterin on\nTwitter: He suggested the usage of metrics to detect the proximity between two\nstrings to fight against scam/phishing based on fake accounts of celebrities\nover the Internet in general and on Twitter in particular.\n\nHere is the tweet -->\nhttps://twitter.com/VitalikButerin/status/958653430607704064\n\nHere is the Damerau-Levenshtein algorithm explanation -->\nhttps://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance\n\n## Package installation\nRun `npm install damerau-levenshtein-js` to install the package.\n\n## Usage\n\n### Require\nRequire the package in the sources:\n```javascript\nconst dl = require(\'damerau-levenshtein-js\');\n```\n\n### String distance calculation\n```javascript\ndl.distance(\'VitalikButerin\', \'VitaljkButerin\');\n```\n\nA call to the "distance" function located in "damerau-levenshtein.js" returns an\ninteger that represents the calculated distance between the 2 strings passed as\nparameters. If 0 is returned, the strings are identical. The higher the score,\nthe less similar the strings are. -1 means that a problem occurred because of a\nnull or undefined parameter.\n\nDONATION:\nAs I share these sources for commercial use too, maybe you could consider\nsending me a reward (even a tiny one) to my Ethereum wallet at the address\n0x1fEaa1E88203cc13ffE9BAe434385350bBf10868\nIf so, I would be forever grateful to you and motivated to keep up the good work\nfor sure :oD Thanks in advance !\n\nFEEDBACK:\nYou like my work? It helps you? You plan to use/reuse/transform it? You have\nsuggestions or questions about it? Just want to say "hi"? Let me know your\nfeedbacks by mail to the address fabvalaaah@laposte.net\n\nDISCLAIMER:\nI am not responsible in any way of any consequence of the usage of this piece of\nsoftware. You are warned, use it at your own risks.\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '610e37a1be5dacf004377c6b59dc7126d90cf89d',
+18 silly publish   bugs: { url: 'https://github.com/fabvalaaah/damerau-levenshtein-js/issues' },
+18 silly publish   homepage: 'https://github.com/fabvalaaah/damerau-levenshtein-js#readme',
+18 silly publish   _id: 'damerau-levenshtein-js@1.0.0',
+18 silly publish   _shasum: 'da23e6ddd9d9dd2300eb9fd4bffe76f7c268acb8',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name damerau-levenshtein-js
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/damerau-levenshtein-js
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/tom/.npm/damerau-levenshtein-js/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/damerau-levenshtein-js
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 3:56:40 PM
+29 verbose request using bearer token for auth
+30 verbose request id 334465b5cc3d14cb
+31 http request PUT https://registry.npmjs.org/damerau-levenshtein-js
+32 http 403 https://registry.npmjs.org/damerau-levenshtein-js
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '91',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Sat, 03 Feb 2018 14:56:42 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-cdg8723-CDG',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1517669801.102584,VS0,VE1323',
+33 verbose headers   vary: 'Accept-Encoding, Accept' }
+34 verbose request invalidating /home/tom/.npm/registry.npmjs.org/damerau-levenshtein-js on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You cannot publish over the previously published version 1.0.0. : damerau-levenshtein-js
+36 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid damerau-levenshtein-js
+39 verbose cwd /home/tom/nbworkspace/damerau-levenshtein-js
+40 error Linux 4.13.0-32-generic
+41 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+42 error node v4.2.6
+43 error npm  v3.5.2
+44 error code E403
+45 error You cannot publish over the previously published version 1.0.0. : damerau-levenshtein-js
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
