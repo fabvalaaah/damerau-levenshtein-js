@@ -1,6 +1,6 @@
 # damerau-levenshtein-js
-Easy to use NodeJS NPM module that calculates the Damerau-Levenshtein distance
-between 2 strings.
+Easy to use NodeJS NPM module that calculates synchronously and asynchronously
+(promises) the Damerau-Levenshtein distance between strings.
 
 This is a NodeJS NetBeans project, tested with NodeJS v4.2.6 on Ubuntu Linux
 16.04.3 LTS x64.
@@ -20,6 +20,15 @@ https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
 Run `npm install damerau-levenshtein-js` to install the package.
 
 ## Usage
+
+A call to the "distance" or "distanceProm" functions located in "app.js" returns
+an integer that represents the calculated distance between the 2 strings passed
+as parameters. If 0 is returned, the strings are identical. The higher the
+score, the less similar the strings are. -1 means that a problem occurred
+because of a null or undefined parameter. The "minDistanceProm" function returns
+the minimum distance between a string and a list of strings passed as
+parameters. The returned integer values have the same meanings as for "distance"
+and "distanceProm".
 
 ### Require
 Require the package in the sources:
@@ -49,17 +58,8 @@ dl.minDistanceProm('VitalikButerin', list)
 ```
 
 ### Tests
-Run `npm test` from the module local directory to execute the embedded tests
+Run `npm test` from the local module directory to execute the embedded tests
 campaign.
-
-A call to the "distance" or "distanceProm" functions located in "app.js" returns
-an integer that represents the calculated distance between the 2 strings passed
-as parameters. If 0 is returned, the strings are identical. The higher the
-score, the less similar the strings are. -1 means that a problem occurred
-because of a null or undefined parameter. The "minDistanceProm" function returns
-the minimum distance between a string and a list of strings passed as
-parameters. The returned integer values have the same meanings as for "distance"
-and "distanceProm".
 
 DONATION:
 As I share these sources for commercial use too, maybe you could consider
