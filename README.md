@@ -27,16 +27,39 @@ Require the package in the sources:
 const dl = require('damerau-levenshtein-js');
 ```
 
-### String distance calculation
+### String distance calculation (synchronous)
 ```javascript
 dl.distance('VitalikButerin', 'VitaljkButerin');
 ```
 
-A call to the "distance" function located in "app.js" returns an integer that
-represents the calculated distance between the 2 strings passed as parameters.
-If 0 is returned, the strings are identical. The higher the score, the less
-similar the strings are. -1 means that a problem occurred because of a null or
-undefined parameter.
+### String distance calculation (asynchronous with promise)
+```javascript
+dl.distanceProm('VitalikButerin', 'VitaljkButerin')
+        .then(result => ...)
+        .catch(result => ...);
+```
+
+### String minimum distance calculation (asynchronous with promise)
+```javascript
+let list = ['VitalikButer', 'cryptobutterin', 'Vitalik', 'VitalikBute',
+    'ethereum'];
+dl.minDistanceProm('VitalikButerin', list)
+        .then(result => ...)
+        .catch(result => ...);
+```
+
+### Tests
+Run `npm test` from the module local directory to execute the embedded tests
+campaign.
+
+A call to the "distance" or "distanceProm" functions located in "app.js" returns
+an integer that represents the calculated distance between the 2 strings passed
+as parameters. If 0 is returned, the strings are identical. The higher the
+score, the less similar the strings are. -1 means that a problem occurred
+because of a null or undefined parameter. The "minDistanceProm" function returns
+the minimum distance between a string and a list of strings passed as
+parameters. The returned integer values have the same meanings as for "distance"
+and "distanceProm".
 
 DONATION:
 As I share these sources for commercial use too, maybe you could consider

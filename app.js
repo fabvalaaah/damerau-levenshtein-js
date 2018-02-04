@@ -74,7 +74,8 @@ function damerau(i, j, s1, s2, d, cost) {
 }
 
 function distance(s1, s2) {
-    if (undefined == s1 || undefined == s2) {
+    if (undefined == s1 || undefined == s2 || 'string' !== typeof s1
+            || 'string' !== typeof s2) {
         return -1;
     }
 
@@ -104,4 +105,42 @@ function distance(s1, s2) {
     return d[s1.length][s2.length];
 }
 
+function distanceProm(s1, s2) {
+    return new Promise((resolve, reject) => {
+        let result = distance(s1, s2);
+        if (0 <= result) {
+            resolve(result);
+        } else {
+            reject(result);
+        }
+    });
+}
+
+function minDistanceProm(s1, list) {
+    return new Promise((resolve, reject) => {
+        if (undefined == list || !Array.isArray(list)) {
+            reject(-1);
+        } else if (0 === list.length) {
+            resolve(distance(s1, ''));
+        }
+        
+        let min = -2;
+
+        list.forEach((s2) => {
+            let d = distance(s1, s2);
+            if (-2 === min || d < min) {
+                min = d;
+            }
+        });
+
+        if (0 <= min) {
+            resolve(min);
+        } else {
+            reject(min);
+        }
+    });
+}
+
+exports.distanceProm = distanceProm;
 exports.distance = distance;
+exports.minDistanceProm = minDistanceProm;
