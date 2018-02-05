@@ -1,6 +1,8 @@
 # damerau-levenshtein-js
-Easy to use NodeJS NPM module that calculates synchronously and asynchronously
-(promises) the Damerau-Levenshtein distance between strings.
+Fast and easy to use NodeJS NPM module that calculates synchronously and
+asynchronously (promises) the Damerau-Levenshtein distance between strings. For
+example, it can help in detecting fake celebrities accounts created for
+scamming.
 
 This is a NodeJS NetBeans project, tested with NodeJS v4.2.6 on Ubuntu Linux
 16.04.3 LTS x64.
