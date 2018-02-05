@@ -52,9 +52,9 @@ function initMatrix(s1, s2) {
         return null;
     }
 
-    let d = new Array();
+    let d = [];
     for (let i = 0; i <= s1.length; i++) {
-        d[i] = new Array();
+        d[i] = [];
         d[i][0] = i;
     }
     for (let j = 0; j <= s2.length; j++) {
