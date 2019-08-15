@@ -4,7 +4,8 @@ Fast and easy to use module that calculates synchronously and asynchronously
 (promises) the Damerau-Levenshtein distance between strings. For example, it
 can help in detecting fake celebrities accounts created for scamming.
 
-This project has been tested with NodeJS v4.2.6 on Ubuntu Linux 18.04.3 LTS x64.
+This project has been tested with Node.js v10.16.0 on Ubuntu Linux 18.04.3 LTS
+x64.
 
 I remembered this algorithm because of a wise suggestion of Vitalik Buterin on
 Twitter: He suggested the usage of metrics to detect the proximity between two
