@@ -59,52 +59,52 @@ console.log("|  SYNCHRONOUS TESTS  |");
 console.log("*---------------------*");
 
 let s2 = "VitalikButerin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalijButerin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalickButter";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikBularin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikButeriln";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "cryptobutterin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitaljkButerin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikButerinr";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikBukerin";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikButeri";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikButer";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "VitalikBute";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = "";
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = null;
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = undefined;
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 
 s2 = 42;
-console.log(s1 + " " + s2 + " " + dl.distance(s1, s2));
+console.log(`${s1} ${s2} ${dl.distance(s1, s2)}`);
 // -------
 
 // Asynchronous (promise) distance calculation tests
@@ -122,78 +122,78 @@ const list = [
   "ethereum"
 ];
 dl.minDistanceProm(s1, list)
-  .then(result => console.log("OK with minimal distance of " + result))
-  .catch(result => console.log("KO with minimal distance of " + result));
+  .then(result => console.log(`OK with minimal distance of ${result}`))
+  .catch(result => console.log(`KO with minimal distance of ${result}`));
 
 dl.minDistanceProm(s1, [])
-  .then(result => console.log("OK with minimal distance of " + result))
-  .catch(result => console.log("KO with minimal distance of " + result));
+  .then(result => console.log(`OK with minimal distance of ${result}`))
+  .catch(result => console.log(`KO with minimal distance of ${result}`));
 
 dl.minDistanceProm(s1, null)
-  .then(result => console.log("OK with minimal distance of " + result))
-  .catch(result => console.log("KO with minimal distance of " + result));
+  .then(result => console.log(`OK with minimal distance of ${result}`))
+  .catch(result => console.log(`KO with minimal distance of ${result}`));
 
 dl.distanceProm(s1, "VitalikButerin")
-  .then(result => console.log("OK " + s1 + " VitalikButerin " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikButerin " + result));
+  .then(result => console.log(`OK ${s1} VitalikButerin ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikButerin ${result}`));
 
 dl.distanceProm(s1, "VitalijButerin")
-  .then(result => console.log("OK " + s1 + " VitalijButerin " + result))
-  .catch(result => console.log("KO " + s1 + " VitalijButerin " + result));
+  .then(result => console.log(`OK ${s1} VitalijButerin ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalijButerin ${result}`));
 
 dl.distanceProm(s1, "VitalickButter")
-  .then(result => console.log("OK " + s1 + " VitalickButter " + result))
-  .catch(result => console.log("KO " + s1 + " VitalickButter " + result));
+  .then(result => console.log(`OK ${s1} VitalickButter ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalickButter ${result}`));
 
 dl.distanceProm(s1, "VitalikBularin")
-  .then(result => console.log("OK " + s1 + " VitalikBularin " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikBularin " + result));
+  .then(result => console.log(`OK ${s1} VitalikBularin ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikBularin ${result}`));
 
 dl.distanceProm(s1, "VitalikButeriln")
-  .then(result => console.log("OK " + s1 + " VitalikButeriln " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikButeriln " + result));
+  .then(result => console.log(`OK ${s1} VitalikButeriln ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikButeriln ${result}`));
 
 dl.distanceProm(s1, "cryptobutterin")
-  .then(result => console.log("OK " + s1 + " cryptobutterin " + result))
-  .catch(result => console.log("KO " + s1 + " cryptobutterin " + result));
+  .then(result => console.log(`OK ${s1} cryptobutterin ${result}`))
+  .catch(result => console.log(`KO ${s1} cryptobutterin ${result}`));
 
 dl.distanceProm(s1, "VitaljkButerin")
-  .then(result => console.log("OK " + s1 + " VitaljkButerin " + result))
-  .catch(result => console.log("KO " + s1 + " VitaljkButerin " + result));
+  .then(result => console.log(`OK ${s1} VitaljkButerin ${result}`))
+  .catch(result => console.log(`KO ${s1} VitaljkButerin ${result}`));
 
 dl.distanceProm(s1, "VitalikButerinr")
-  .then(result => console.log("OK " + s1 + " VitalikButerinr " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikButerinr " + result));
+  .then(result => console.log(`OK ${s1} VitalikButerinr ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikButerinr ${result}`));
 
 dl.distanceProm(s1, "VitalikBukerin")
-  .then(result => console.log("OK " + s1 + " VitalikBukerin " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikBukerin " + result));
+  .then(result => console.log(`OK ${s1} VitalikBukerin ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikBukerin ${result}`));
 
 dl.distanceProm(s1, "VitalikButeri")
-  .then(result => console.log("OK " + s1 + " VitalikButeri " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikButeri " + result));
+  .then(result => console.log(`OK ${s1} VitalikButeri ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikButeri ${result}`));
 
 dl.distanceProm(s1, "VitalikButer")
-  .then(result => console.log("OK " + s1 + " VitalikButer " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikButer " + result));
+  .then(result => console.log(`OK ${s1} VitalikButer ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikButer ${result}`));
 
 dl.distanceProm(s1, "VitalikBute")
-  .then(result => console.log("OK " + s1 + " VitalikBute " + result))
-  .catch(result => console.log("KO " + s1 + " VitalikBute " + result));
+  .then(result => console.log(`OK ${s1} VitalikBute ${result}`))
+  .catch(result => console.log(`KO ${s1} VitalikBute ${result}`));
 
 dl.distanceProm(s1, "")
-  .then(result => console.log("OK " + s1 + "  " + result))
-  .catch(result => console.log("KO " + s1 + "  " + result));
+  .then(result => console.log(`OK ${s1}  ${result}`))
+  .catch(result => console.log(`KO ${s1}  ${result}`));
 
 dl.distanceProm(s1, null)
-  .then(result => console.log("OK " + s1 + " " + null + " " + result))
-  .catch(result => console.log("KO " + s1 + " " + null + " " + result));
+  .then(result => console.log(`OK ${s1} null ${result}`))
+  .catch(result => console.log(`KO ${s1} null ${result}`));
 
 dl.distanceProm(s1, undefined)
-  .then(result => console.log("OK " + s1 + " " + undefined + " " + result))
-  .catch(result => console.log("KO " + s1 + " " + undefined + " " + result));
+  .then(result => console.log(`OK ${s1} undefined ${result}`))
+  .catch(result => console.log(`KO ${s1} undefined ${result}`));
 
 dl.distanceProm(s1, 42)
-  .then(result => console.log("OK " + s1 + " " + 42 + " " + result))
-  .catch(result => console.log("KO " + s1 + " " + 42 + " " + result));
+  .then(result => console.log(`OK ${s1} 42 ${result}`))
+  .catch(result => console.log(`KO ${s1} 42 ${result}`));
 // -------
