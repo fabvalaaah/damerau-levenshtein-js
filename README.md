@@ -1,11 +1,10 @@
 # damerau-levenshtein-js
-Fast and easy to use NodeJS NPM module that calculates synchronously and
-asynchronously (promises) the Damerau-Levenshtein distance between strings. For
-example, it can help in detecting fake celebrities accounts created for
-scamming.
 
-This is a NodeJS NetBeans project, tested with NodeJS v4.2.6 on Ubuntu Linux
-16.04.3 LTS x64.
+Fast and easy to use module that calculates synchronously and asynchronously
+(promises) the Damerau-Levenshtein distance between strings. For example, it
+can help in detecting fake celebrities accounts created for scamming.
+
+This project has been tested with NodeJS v4.2.6 on Ubuntu Linux 18.04.3 LTS x64.
 
 I remembered this algorithm because of a wise suggestion of Vitalik Buterin on
 Twitter: He suggested the usage of metrics to detect the proximity between two
@@ -19,6 +18,7 @@ Here is the Damerau-Levenshtein algorithm explanation -->
 https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
 
 ## Package installation
+
 Run `npm install damerau-levenshtein-js` to install the package.
 
 ## Usage
@@ -33,17 +33,21 @@ parameters. The returned integer values have the same meanings as for "distance"
 and "distanceProm".
 
 ### Require
+
 Require the package in the sources:
+
 ```javascript
-const dl = require('damerau-levenshtein-js');
+const dl = require("damerau-levenshtein-js");
 ```
 
 ### String distance calculation (synchronous)
+
 ```javascript
-dl.distance('VitalikButerin', 'VitaljkButerin');
+dl.distance("VitalikButerin", "VitaljkButerin");
 ```
 
 ### String distance calculation (asynchronous with promise)
+
 ```javascript
 dl.distanceProm('VitalikButerin', 'VitaljkButerin')
         .then(result => ...)
@@ -51,6 +55,7 @@ dl.distanceProm('VitalikButerin', 'VitaljkButerin')
 ```
 
 ### String minimum distance calculation (asynchronous with promise)
+
 ```javascript
 let list = ['VitalikButer', 'cryptobutterin', 'Vitalik', 'VitalikBute',
     'ethereum'];
@@ -60,8 +65,10 @@ dl.minDistanceProm('VitalikButerin', list)
 ```
 
 ### Tests
-Run `npm test` from the local module directory to execute the embedded tests
-campaign.
+
+Run `npm test` from the local module directory to execute the embedded "tests".
+I assume that these are not actual serious tests. Consider them as a sample of
+common use-cases.
 
 DONATION:
 As I share these sources for commercial use too, maybe you could consider
