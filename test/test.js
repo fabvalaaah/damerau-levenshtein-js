@@ -39,7 +39,7 @@
  */
 
 /*
- * File:   test.js
+ * File:   tests.js
  * Author: Fabvalaaah
  *
  * 02/03/2018
