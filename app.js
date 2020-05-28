@@ -1,4 +1,4 @@
-/*
+/**
  * MIT License
  *
  * Copyright (c) 2018 Fabvalaaah - fabvalaaah@laposte.net
@@ -20,32 +20,16 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- *
- * DONATION:
- * As I share these sources for commercial use too, maybe you could consider
- * sending me a reward (even a tiny one) to my Ethereum wallet at the address
- * 0x1fEaa1E88203cc13ffE9BAe434385350bBf10868
- * If so, I would be forever grateful to you and motivated to keep up the good
- * work for sure :oD Thanks in advance !
- *
- * FEEDBACK:
- * You like my work? It helps you? You plan to use/reuse/transform it? You have
- * suggestions or questions about it? Just want to say "hi"? Let me know your
- * feedbacks by mail to the address fabvalaaah@laposte.net
- *
- * DISCLAIMER:
- * I am not responsible in any way of any consequence of the usage
- * of this piece of software. You are warned, use it at your own risks.
  */
 
-/*
- * File:   app.js
- * Author: Fabvalaaah
- *
- * 02/01/2018
+/**
+ * DISCLAIMER:
+ * I am not responsible in any way of any consequence of the usage of this piece
+ * of software. You are warned, use it at your own risks.
  */
 
 const initMatrix = (s1, s2) => {
+  /* istanbul ignore next */
   if (undefined == s1 || undefined == s2) {
     return null;
   }
@@ -79,6 +63,7 @@ const distance = (s1, s2) => {
   }
 
   let d = initMatrix(s1, s2);
+  /* istanbul ignore next */
   if (null === d) {
     return -1;
   }
@@ -94,7 +79,7 @@ const distance = (s1, s2) => {
       d[i][j] = Math.min.apply(null, [
         d[i - 1][j] + 1,
         d[i][j - 1] + 1,
-        d[i - 1][j - 1] + cost
+        d[i - 1][j - 1] + cost,
       ]);
 
       damerau(i, j, s1, s2, d, cost);
@@ -126,7 +111,7 @@ const minDistanceProm = (s1, list) =>
 
     let min = -2;
 
-    list.forEach(s2 => {
+    list.forEach((s2) => {
       let d = distance(s1, s2);
       if (-2 === min || d < min) {
         min = d;
@@ -143,5 +128,5 @@ const minDistanceProm = (s1, list) =>
 module.exports = {
   distanceProm,
   distance,
-  minDistanceProm
+  minDistanceProm,
 };

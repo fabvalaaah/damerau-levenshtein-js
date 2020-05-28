@@ -1,88 +1,50 @@
 # damerau-levenshtein-js
 
-Fast and easy to use module that calculates synchronously and asynchronously
-(promises) the Damerau-Levenshtein distance between strings. For example, it
-can help in detecting fake celebrities accounts created for scamming.
+NPM package that calculates synchronously or asynchronously the Damerau-Levenshtein distance between strings.
 
-This project has been tested with Node.js v10.16.0 on Ubuntu Linux 18.04.3 LTS
-x64.
+## Installation
 
-I remembered this algorithm because of a wise suggestion of Vitalik Buterin on
-Twitter: He suggested the usage of metrics to detect the proximity between two
-strings to fight against scam/phishing based on fake accounts of celebrities
-over the Internet in general and on Twitter in particular.
-
-Here is the tweet -->
-https://twitter.com/VitalikButerin/status/958653430607704064
-
-Here is the Damerau-Levenshtein algorithm explanation -->
-https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
-
-## Package installation
-
-Run `npm install damerau-levenshtein-js` to install the package.
+To add this package as a dependency to a project: `npm i damerau-levenshtein-js`
 
 ## Usage
 
-A call to the "distance" or "distanceProm" functions located in "app.js" returns
-an integer that represents the calculated distance between the 2 strings passed
-as parameters. If 0 is returned, the strings are identical. The higher the
-score, the less similar the strings are. -1 means that a problem occurred
-because of a null or undefined parameter. The "minDistanceProm" function returns
-the minimum distance between a string and a list of strings passed as
-parameters. The returned integer values have the same meanings as for "distance"
-and "distanceProm".
+Call to "distance" or "distanceProm" functions outputs an integer, the calculated Damerau-Levenshtein distance between 2 strings given as parameters. If the result is 0, strings are identical. The higher the result, the less similar strings are. If the result is -1, it means that a problem occurred because of a bad parameter (e.g. null or undefined). Call to "minDistanceProm" function outputs the minimum distance between a string and a list of strings given as parameters.
 
 ### Require
 
-Require the package in the sources:
+To require this package into sources:
 
 ```javascript
-const dl = require("damerau-levenshtein-js");
+const dljs = require("damerau-levenshtein-js");
 ```
 
-### String distance calculation (synchronous)
+### Synchronous Damerau-Levenshtein distance calculation between 2 strings
 
 ```javascript
-dl.distance("VitalikButerin", "VitaljkButerin");
+let result = dljs.distance("hello here", "hello there");
 ```
 
-### String distance calculation (asynchronous with promise)
+### Asynchronous Damerau-Levenshtein distance calculation between 2 strings
 
 ```javascript
-dl.distanceProm('VitalikButerin', 'VitaljkButerin')
-        .then(result => ...)
-        .catch(result => ...);
+dljs.distanceProm("hello here", "hello there")
+        .then((result) => ...)
+        .catch((result) => ...);
 ```
 
-### String minimum distance calculation (asynchronous with promise)
+### Asynchronous minimum Damerau-Levenshtein distance calculation between a string and an array of strings
 
 ```javascript
-let list = ['VitalikButer', 'cryptobutterin', 'Vitalik', 'VitalikBute',
-    'ethereum'];
-dl.minDistanceProm('VitalikButerin', list)
-        .then(result => ...)
-        .catch(result => ...);
+let list = ["hello here", "hello there", "world", "world hello"];
+dljs.minDistanceProm("hello world", list)
+        .then((result) => ...)
+        .catch((result) => ...);
 ```
 
 ### Tests
 
-Run `npm test` from the local module directory to execute the embedded "tests".
-I assume that these are not actual serious tests. Consider them as a sample of
-common use-cases.
+To execute the embedded tests: `npm test`
 
-DONATION:
-As I share these sources for commercial use too, maybe you could consider
-sending me a reward (even a tiny one) to my Ethereum wallet at the address
-0x1fEaa1E88203cc13ffE9BAe434385350bBf10868
-If so, I would be forever grateful to you and motivated to keep up the good work
-for sure :oD Thanks in advance !
+## Disclaimer
 
-FEEDBACK:
-You like my work? It helps you? You plan to use/reuse/transform it? You have
-suggestions or questions about it? Just want to say "hi"? Let me know your
-feedbacks by mail to the address fabvalaaah@laposte.net
-
-DISCLAIMER:
-I am not responsible in any way of any consequence of the usage of this piece of
-software. You are warned, use it at your own risks.
+I am not responsible in any way of any consequence of the usage of this piece of software. You are warned, use it at your own risks.

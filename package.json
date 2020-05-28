@@ -1,29 +1,15 @@
 {
   "name": "damerau-levenshtein-js",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "keywords": [
-    "Damerau",
-    "Levenshtein",
-    "Damerau-Levenshtein",
-    "Levenshtein-Damerau",
+    "damerau",
+    "levenshtein",
+    "damerau-levenshtein",
+    "levenshtein-damerau",
     "string",
-    "distance",
-    "metrics",
-    "easy",
-    "simple",
-    "NPM",
-    "NodeJS",
-    "scam",
-    "scammer",
-    "scammers",
-    "fake",
-    "account",
-    "accounts",
-    "phishing",
-    "detection",
-    "detector"
+    "distance"
   ],
-  "description": "Fast and easy to use module that calculates synchronously and asynchronously (promises) the Damerau-Levenshtein distance between strings. For example, it can help in detecting fake celebrities accounts created for scamming.",
+  "description": "NPM package that calculates synchronously or asynchronously the Damerau-Levenshtein distance between strings",
   "main": "app.js",
   "license": "MIT",
   "author": "Fabvalaaah",
@@ -36,7 +22,12 @@
     "url": "https://github.com/fabvalaaah/damerau-levenshtein-js.git"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "jest --coverage"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "jest": "26.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
