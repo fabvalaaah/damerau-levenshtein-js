@@ -4,15 +4,13 @@ NPM package that calculates synchronously or asynchronously the Damerau-Levensht
 
 ## Installation
 
-To add this package as a dependency to a project: `npm i damerau-levenshtein-js`
+`npm i damerau-levenshtein-js`
 
 ## Usage
 
 Call to "distance" or "distanceProm" functions outputs an integer, the calculated Damerau-Levenshtein distance between 2 strings given as parameters. If the result is 0, strings are identical. The higher the result, the less similar strings are. If the result is -1, it means that a problem occurred because of a bad parameter (e.g. null or undefined). Call to "minDistanceProm" function outputs the minimum distance between a string and a list of strings given as parameters.
 
 ### Require
-
-To require this package into sources:
 
 ```javascript
 const dljs = require("damerau-levenshtein-js");
@@ -43,7 +41,7 @@ dljs.minDistanceProm("hello world", list)
 
 ### Tests
 
-To execute the embedded tests: `npm test`
+`npm test`
 
 ## Disclaimer
 
